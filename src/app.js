@@ -6,6 +6,7 @@ const path=require("path")
 const hbs = require('hbs')
 const request=require("request")
 
+const PORT=process.env.PORT
 
 const app = express()
 app.use(express.json());
@@ -42,7 +43,7 @@ app.post('/weather', async (req, res) => {
     weather={}
     for (let i=0 ;i<data.cities.length;i++){
         //Get the Forecast for each City
-        const url = 'http://api.weatherstack.com/current?access_key='+API_KEY+'&query='+data.cities[i]
+        const url = 'http://api.weatherstack.com/current?access_key='+process.env.API_KEY+'&query='+data.cities[i]
         console.log(url)
         await request({url, json: true }, (error, { body }) => {
         if (error) {
@@ -72,6 +73,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(3000, () => {
+app.listen(, () => {
     console.log('Server is up on port 3000.')
 })
