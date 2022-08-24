@@ -18,7 +18,7 @@ const viewsPath = path.join(__dirname, '../templates/views')
 
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
-hbs.registerPartials(partialsPath)
+
 
 
 app.use(express.static(publicDirectoryPath))
@@ -73,6 +73,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(, () => {
+app.listen(PORT, () => {
     console.log('Server is up on port 3000.')
 })

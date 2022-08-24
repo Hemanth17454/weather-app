@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js",
+    "dev": "env-cmd -f ./config/dev.env node src/app.js"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,8 @@
     "hbs": "^4.0.1",
     "request": "^2.88.0"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  }
 }
