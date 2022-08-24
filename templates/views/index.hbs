@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+
+        <h1>Weather App</h1>
+        <p> Enter Locations Separated by &quot; , &quot; </p>
+
+        <form>
+            <input placeholder="Enter Locations Separated by &quot;,&quot;">
+            <button>Search</button>
+        </form>
+        <p id="load"></p>
+        <table id="display">
+            
+        </table>
+    </div>
+    <script id ="heading" type="text/html">
+        <tr>
+            <th>CITY</th>
+            <th>Temparature</th>
+        </tr>
+    </script>
+    <script src="/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+</body>
+
+</html>
